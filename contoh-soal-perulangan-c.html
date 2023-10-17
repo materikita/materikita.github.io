@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoh Soal Perulangan C++ - BELAJAR</title>
+    <meta name="description" content="Contoh Soal Perulangan C++, , , , , , , 0, , , , , , 0, contoh-soal-perulangan-c, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contoh Soal Perulangan C++ - BELAJAR" />
+    <meta property="og:description" content="Contoh Soal Perulangan C++, , , , , , , 0, , , , , , 0, contoh-soal-perulangan-c, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contoh Soal Perulangan C++ - BELAJAR" />
+    <meta name="twitter:description" content="Contoh Soal Perulangan C++, , , , , , , 0, , , , , , 0, contoh-soal-perulangan-c, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://materikita.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://materikita.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://materikita.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://materikita.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://materikita.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://materikita.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://materikita.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://materikita.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://materikita.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://materikita.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Contoh Soal Perulangan C++</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">annisaraisa12</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Contoh+Soal+Perulangan+C%2B%2B" alt="Contoh Soal Perulangan C++">
+                    </div>
+                    <p></p>
+                    <p>yang merupakan contoh tugas kelompok adalah a. tugas diskusi b. membuat laporan kegiatan c. mengerjakan soal ulangan harian​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#yang-merupakan-contoh-tugas-kelompok-adalah-a-tugas-diskusi-b-membuat-laporan-kegiatan-c-mengerjakan-soal-ulangan-harian%e2%80%8b">1.
+                                            yang merupakan contoh tugas kelompok adalah a. tugas diskusi b. membuat laporan kegiatan c. mengerjakan soal ulangan harian​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#21-berikut-ini-yang-merupakan-contoh-kerja-sama-dalam-keberagaman-di-sekolah-adalah-a-kerja-bakti-membersihkan-halaman-sekolah-c-mengerjakan-soal-ulangan-secara-mandirib-berdiskusi-mengerjakan">2.
+                                            21. Berikut ini yang merupakan contoh kerja sama dalam keberagaman di sekolah adalah ....A kerja bakti membersihkan halaman sekolah C. mengerjakan soal ulangan secara mandiriB. berdiskusi mengerjakan soal ulanganD. mengusulkan kegiatan sekolah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pada-saat-mengerjakan-soal-ulangan-harian-zaki-meminjamkan-lembar-jawaban-kepada-irfan-teman-sebangkunya-irfan-tidak-dapat-mengerjakan-soal-ulangan-karena-tidak-ada-persiapan-sikap-empati-yang-ditu">3.
+                                            pada saat mengerjakan soal ulangan harian Zaki meminjamkan lembar jawaban kepada Irfan, teman sebangkunya. Irfan tidak dapat mengerjakan soal ulangan karena tidak ada persiapan. Sikap empati yang ditunjukkan Zaki adalah.......                           A. tepat sekali                                                    B. perlu dicontoh                                               C. tidak benar                                                  D. benar jika didasarkan atas kerelaan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dalam-puisi-penggunaan-pengulangan-kata-atau-frase-yang-sama-disebut-a-rimab-simbolismec-aliterasid-repetisicontoh-soal-ujian-akhir-sekolah-pat">4.
+                                            Dalam puisi, penggunaan pengulangan kata atau frase yang sama disebut...
+A. rima
+B. simbolisme
+C. aliterasi
+D. repetisi
+Contoh Soal Ujian Akhir Sekolah PAT</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#18-kita-diwajibkan-bersatu-dalam-hal-keberagaman-berikut-contoh-sikapbersatu-dalam-keberagaman-kecuali-a-mengerjakan-tugas-kelompokb-mengerjakan-soal-ulangan-bersamac-melakukan-piket-members">5.
+                                            18. Kita diwajibkan bersatu dalam hal keberagaman. Berikut contoh sikapbersatu dalam keberagaman, kecuali ....A. Mengerjakan tugas kelompokB. Mengerjakan soal ulangan bersamaC. Melakukan piket membersihkan kelas Bersama​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-berikut-ini-contoh-kerjasama-dalam-belajar-adalah-a-meniru-jawaban-teman-b-membantu-menjelaskan-materi-kepada-teman-yang-belum-paham-c-bekerjasama-mengerjakan-soal-ketika-ulangan-d-menul">6.
+                                             9. Berikut ini contoh kerjasama dalam belajar adalah .... a.meniru jawaban teman b. membantu menjelaskan materi kepada teman yang belum paham . c. bekerjasama mengerjakan soal ketika ulangan d. menuliska pekerjaan rumah temannya agar mendapat hadiah jawab :note : ngasal gpp​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-soal-ujian-sekolah-sdnilai-ulangan-matematika-beberapa-siswa86-82-94-92-86-88-96-dan-94-rata-rata-nilai-ulangan-tersebut-adalah-%e2%80%a6-a-8850-c-8950b">7.
+                                            Contoh Soal Ujian Sekolah SD
+Nilai ulangan Matematika beberapa siswa:
+86, 82, 94, 92, 86, 88, 96, dan 94.
+Rata-rata nilai ulangan tersebut adalah ….
+A. 88,50                       C. 89,50
+B. 88,75                       D. 89,75</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-tindakan-belas-kasih-adalah-a-memarahi-teman-b-bermain-di-rumah-teman-sampai-larut-malam-c-menghibur-teman-yang-sedang-sedih-d-membantu-teman-mengerjakan-soal-saat-ulangan%e2%80%8b">8.
+                                            contoh tindakan belas kasih adalah...a memarahi teman b. bermain di rumah teman sampai larut malam c. menghibur teman yang sedang sedih d. membantu teman mengerjakan soal saat ulangan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikut-ini-adalah-contoh-perpindahan-panas-secara-konduksikecuali-a-memegang-sendok-stainles-yang-dicelupkan-di-air-panasb-knalpot-motor-menjadi-panas-saat-mesin-dihidupkan-c-gagang-panci-k">9.
+                                            berikut ini adalah contoh perpindahan panas secara konduksi,kecuali...... A. memegang sendok stainles yang dicelupkan di air panasB. knalpot motor menjadi panas saat mesin dihidupkan C. gagang panci ketika sedang menanak nasiD. air mendidih bergerak naik turun ketika dipanaskanjawab ya pliis soalnya ini soal ulangan aku​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-perbuatan-meneladani-sikap-pahlawan-pembina-persatuan-dan-kesatuan-di-sekolah-adalaha-mengerjakan-soal-ujian-bersama-sama-b-membantu-teman-mengerjakan-soal-ulangan-harian-c-memb">10.
+                                            contoh perbuatan meneladani sikap pahlawan pembina persatuan dan kesatuan di sekolah adalahA. Mengerjakan soal ujian        bersama sama.B. membantu teman    mengerjakan soal ulangan   harian.C.  Membersihkan lingkungan sekolah bersama-sama.D. bersama-sama memperbaiki jembatan.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-bentuk-keterbukaan-yang-dapat-kamu-tunjukkan-di-sekolah-adalah-a-memberikan-memberitahu-jawaban-kepada-teman-saat-ulanganb-berdiskusi-dengan-teman-saat-ulanganc-bertanya-tentang-jawaban-so">11.
+                                            contoh bentuk keterbukaan yang dapat kamu tunjukkan di sekolah adalah....a memberikan memberitahu jawaban kepada teman saat ulanganB. berdiskusi dengan teman saat ulanganC. bertanya tentang jawaban soal ulangan kepada teman d. bertanya kepada guru tentang pelajaran yang belum jelas e. tidak memaksakan keputusan hasil musyawarah karena tidak sesuai dengan pendapat pribadi</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#quiz-1560materi-statistikahasil-ulangan-matematika-sekelompok-siswa-sebagai-berikut-banyaknya-siswa-yang-nilainya-lebih-dari-rata-rata-adalah-a-8-orangb-14-orangc-16-orangd-21-orangcontoh-s">12.
+                                            QUIZ (1560)Materi: StatistikaHasil ulangan matematika sekelompok siswa sebagai berikut.Banyaknya siswa yang nilainya lebih dari rata-rata adalah ...A. 8 orangB. 14 orangC. 16 orangD. 21 orang(Contoh Soal Ujian SMP)​​​​​​​​​​​​​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#di-bawah-ini-merupakan-contoh-sikap-yang-menunjukkan-sila-kedua-pancasila-dalam-kehidupan-sehari-hari-adalah-pilihan-tunggal-8-poin-a-saling-membantub-bermusyawarahc-melaksanakan-ibadahd-s">13.
+                                            Di bawah ini merupakan contoh sikap yang menunjukkan sila kedua Pancasila dalam kehidupan sehari-hari adalah..... Pilihan tunggal.( 8 poin )A. Saling membantuB. BermusyawarahC. Melaksanakan ibadahD. Saling menghargai• yang jawab soal-ku, aku follow• jangan asal–asalan soalnya buat ulangan      harian​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#salah-satu-contoh-perwujudan-rasa-persatuan-dan-kesatuan-di-sekolah-adalah-dengana-tidak-pernah-datang-terlambat-b-mengerjakan-tugas-piket-bersama-sama-c-bekerja-sama-saat-menyelesaikan-soal-ulanga">14.
+                                            salah satu contoh perwujudan rasa persatuan dan kesatuan di sekolah adalah denganA. tidak pernah datang terlambat B. mengerjakan tugas piket bersama-sama C. bekerja sama saat menyelesaikan soal ulangan D. menggunakan surat izin saat berhalangan masuk sekolah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-pengamalan-sila-ketiga-pancasila-adalaha-siswa-piket-kelas-bersamab-diskusi-menentukan-ketua-kelasc-siswa-mengerjakan-soal-ulangan-d-menyiram-tumbuhan-yang-ada-di-depan-kelas%e2%80%8b">15.
+                                            contoh pengamalan sila ketiga Pancasila adalahA. siswa piket kelas bersamaB. diskusi menentukan ketua kelasC. siswa mengerjakan soal ulangan D. menyiram tumbuhan yang ada di depan kelas​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-pelaksanaan-hak-di-sekolah-yaitu-a-mendengar-pendapat-teman-saat-diskusib-memberikan-contekan-kepada-temanc-mengerjakan-tugas-individu-bersama-samad-membantu-teman-mengerjakan-soal-ulan">16.
+                                            Contoh pelaksanaan hak di sekolah yaitu ....A. mendengar pendapat teman saat diskusiB. memberikan contekan kepada temanC. mengerjakan tugas individu bersama-samaD. membantu teman mengerjakan soal ulangan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-tumbuhan-yg-bisa-di-olah-sebagai-bahan-serat-adalah-a-serat-b-batang-c-kapas-d-buah-mohon-di-jawab-soalnya-butuh-sekarang-untuk-ulangan-hehehe">17.
+                                            Contoh Tumbuhan Yg Bisa Di Olah Sebagai Bahan Serat Adalah... A. Serat. B. Batang. C. Kapas. D. Buah. Mohon Di Jawab Soalnya Butuh Sekarang Untuk Ulangan Hehehe:').</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikut-contoh-sikap-bersatu-dalam-mengisi-kemerdekaan-kecuali-a-melaksanakan-piket-b-mengerjakan-soal-saat-ulangan-c-menjeguk-teman-sakit-d-memecahkan-masala-dengan-musyawarah-dan-mufakan">18.
+                                            berikut contoh sikap bersatu dalam mengisi kemerdekaan, kecuali A. melaksanakan piket B. mengerjakan soal saat ulangan C. menjeguk teman sakit D. memecahkan masala dengan musyawarah dan mufakan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#husnul-setiap-mengerjakan-soal-ulangan-bersungguh-sungguh-dan-memiliki-sportifitas-ilustrasi-tersebut-merupakan-contoh-perilaku-%e2%80%a6-a-qona%e2%80%99ahb-muru%e2%80%99ahc-syaja%e2%80%99ahd-ana">19.
+                                            Husnul setiap mengerjakan soal ulangan bersungguh-sungguh dan memiliki sportifitas. Ilustrasi tersebut merupakan contoh perilaku ….A. qona’ahB. muru’ahC. syaja’ahD. ananiyahE. qauniyah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-berikut-yang-bukan-merupakan-contoh-penggunaan-komputer-dalam-bidang-pendidikan-adalah-ips-kd-3-2a-adanya-perpustakaan-onlineb-membantu-penyelesaian-soal-ketika-ulanganc-materi-pelajara">20.
+                                            2. Berikut yang bukan merupakan contoh penggunaan komputer dalam bidang pendidikan adalah .... (IPS - KD 3.2)a. adanya perpustakaan onlineb. membantu penyelesaian soal ketika ulanganc. materi pelajaran lebih menarikd. memudahkan berbagi materi dan soal​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#aisyah-adalah-murid-yang-teliti-dan-cermat-dalam-kegiatan-sehari-hari-dia-selalu-teliti-dan-cermat-dalam-mengerjakan-soal-soal-ulangan-dan-tidak-menjawab-soal-soal-ulangan-dengan-tergesa-gesa-sikap">21.
+                                            Aisyah adalah murid yang teliti dan cermat dalam kegiatan sehari-hari. Dia selalu teliti dan cermat dalam mengerjakan soal-soal ulangan dan tidak menjawab soal-soal ulangan dengan tergesa-gesa. Sikap Aisyah merupakan contoh dari salah satu Asmaul Husna, yaitu
+A. Al 'Alim
+B. Al Khobir
+C. As-Sami'
+D. Al Bashir
+Tolong dijawab dengan benar ya</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-soal-utbk-snpmbsebelum-melaksanakan-remedial-rata-rata-nilai-ulangan-siswa-laki-laki-di-kelas-12-ialah-78-sedangkan-rata-rata-nilai-ulangan-siswa-perempuan-ialah-%e2%80%a6a-805b-81c-8">22.
+                                            Contoh Soal UTBK SNPMB
+Sebelum melaksanakan remedial, rata-rata nilai ulangan siswa laki-laki di kelas 12 ialah 78, sedangkan rata-rata nilai ulangan siswa perempuan ialah …
+a. 80,5
+b. 81
+c. 81,5
+d. 82</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-hasil-keputusan-bersama-dalam-musyawarah-adalah-hots-a-bekerja-sama-mengerjakan-soal-ulangan-b-mengatur-jadwal-belajar-c-membeli-makanan-di-kantin-d-melaksanakan-kegiatan-perkemahan-bers">23.
+                                            Contoh hasil keputusan bersama dalam musyawarah adalah.... HOTS a. bekerja sama mengerjakan soal ulangan b.mengatur jadwal belajar c. membeli makanan di kantin d. melaksanakan kegiatan perkemahan bersama​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soal-ulangan-umum-geografi-sma-contoh-objek-geografi-yang-berhubungan-dengan-litosfer-adalah-a-gelombang-dan-arus-laut-b-curah-hujan-c-tanah-longsor-d-cuaca-e-pasang-surut">24.
+                                            Soal ulangan umum Geografi SMA: Contoh objek geografi yang berhubungan dengan litosfer adalah...
+ a. Gelombang dan arus laut
+ b. Curah hujan
+ c. Tanah longsor
+ d. Cuaca
+ e. Pasang surut</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#di-bawah-ini-yang-merupaka-contoh-kalimat-pasif-adalah-a-dalam-kegiatan-tersebut-rizal-ditunjuk-sebagai-ketua-pelaksana-b-bu-lana-mengajarkan-mata-pelajaran-bahasa-indonesia-di-sd-tunas-glob">25.
+                                            Di bawah ini yang merupaka contoh kalimat pasif adalah.... *
+A. Dalam kegiatan tersebut, Rizal ditunjuk sebagai ketua pelaksana.
+B. Bu Lana mengajarkan mata pelajaran Bahasa Indonesia di SD Tunas Global.
+C. Sebelum mengerjakan ulangan Bahasa Indonesia terlebih dahulu harus baca 
+soalnya berulang-ulang.
+D. Untuk menghindari covid-19 kita harus mematuhi protokol kesehatan.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dibawah-ini-contoh-persoalan-yang-dapat-diselesaikan-dengan-musyawarah-adalah-a-kesulitan-mengerjakan-ulangan-karena-lebih-suka-bermain-daripada-belajar-b-prabowo-sering-terlambat-ke-sekolah-karena">26.
+                                            dibawah ini contoh persoalan yang dapat diselesaikan dengan musyawarah adalah A. kesulitan mengerjakan ulangan karena lebih suka bermain daripada belajar B. Prabowo sering terlambat ke sekolah karena kesulitan bangun pagi C. Nayla kesulitan mengerjakan PR karena kurang belajar D. mementingkan kebutuhan pribadi ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-salah-satu-contoh-yang-menunjukkan-sikap-hidup-yang-berubah-menjadi-baruadalah-a-saya-menyesal-memukul-teman-di-saat-bermainb-saya-menyesal-mencuri-lalu-di-pukul-ayahc-saya-menyesal-dan-berjan">27.
+                                            4. Salah satu contoh yang menunjukkan sikap hidup yang berubah menjadi baruadalah...a. Saya menyesal memukul teman di saat bermainb. Saya menyesal mencuri lalu di pukul ayahC. Saya menyesal dan berjanji tidak melakukan lagid. Saya menyesal menyontek pada saat sulit  tolong kak di jawab ini soal ulangan soalnya ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#10-salah-satu-contoh-perwujudanrasa-persatuan-dan-kesatuan-disekolah-adalah-dengan-a-menggunakan-surat-izin-saatberhalangan-masuk-sekolahb-bekerja-sama-saatmenyelesaikan-soal-ulanganc-mengerja">28.
+                                            10. Salah satu contoh perwujudanrasa persatuan dan kesatuan disekolah adalah dengan ....A. Menggunakan surat izin saatberhalangan masuk sekolahB. Bekerja sama saatmenyelesaikan soal ulanganC. Mengerjakan tugas piketbersama-samaD. Tidak pernah datang terlambat​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-perilaku-yang-menunjukkan-keyakinan-terhadap-asmaul-husna-al-baqi-adalah-%e2%80%a6-a-berdoa-dan-bergantung-hanya-kepada-allah-swtb-membantu-teman-mengerjakan-soal-ulanganc-berhati-hati-d">29.
+                                            Contoh perilaku yang menunjukkan keyakinan terhadap Asmaul Husna Al-Baqi adalah …. 
+A. berdoa dan bergantung hanya kepada Allah SWT
+B. membantu teman mengerjakan soal ulangan
+C. Berhati-hati dalam melakukan sesuatu
+D. Disiplin dalam memanfaatkan waktu</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-kalimat-yang-menggunakan-majas-hiperbola-adalah-a-hayama-nomor-1-dunia-b-lokami-seleraku-c-dengan-kekuatan-10-tangan-nyuci-jadi-enteng-d-ada-aqua-tolong-di-jawab-cepat-soalnya">30.
+                                            Contoh kalimat yang menggunakan majas hiperbola adalah ...A . Hayama , nomor 1 dunia B . Lokami , seleraku C . Dengan kekuatan 10 tangan , nyuci jadi enteng D . Ada Aqua Tolong di Jawab Cepat Soalnya Ulangan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-contoh-pengamalan-sila-ketigapancasila-adalaha-membersihkan-halaman-sekolahbersamab-bermusyawarahc-membantu-teman-mengerjakan-soalulangan-hariand-rajin-beribadah%e2%80%8b">31.
+                                            9. Contoh pengamalan sila ketigapancasila adalaha. Membersihkan halaman sekolahbersamab. Bermusyawarahc. Membantu teman mengerjakan soalulangan hariand. Rajin beribadah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikut-contoh-kerjasama-yang-dilakukan-di-lingkungan-sekolah-a-ikuti-posyandu-b-kerja-bakti-membersihkan-kelas-c-mengerjakan-soal-ulangan-bersama-sama-d-mengikuti-siskamling%e2%80%8b">32.
+                                            berikut contoh kerjasama yang dilakukan di lingkungan sekolah A ikuti Posyandu B kerja bakti membersihkan kelas C mengerjakan soal ulangan bersama-sama D mengikuti siskamling​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#4-contoh-pengamalan-sila-ketiga-pancasila-adalah-a-siswa-piket-kelas-bersamab-diskusi-menentukan-ketua-kelasc-siswa-mengerjakan-soal-ulangand-myiram-tumbuhan-yang-ada-di-depan-kelas">33.
+                                            4. Contoh pengamalan sila ketiga Pancasila adalah ....  a. siswa piket kelas bersamab. diskusi menentukan ketua kelasc. siswa mengerjakan soal ulangand. myiram tumbuhan yang ada di depan kelas​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-soal-utbk-snpmbsebuah-kelas-ada-12-murid-laki-laki-dan-16-murid-perempuan-rata-rata-nilai-ulangan-matematikanya-di-kelas-tersebut-ialah-80-sebelum-remedial-nilai-rata-rata-murid-di-kelas-t">34.
+                                            Contoh Soal UTBK SNPMB
+Sebuah kelas, ada 12 murid laki-laki dan 16 murid perempuan. Rata-rata nilai ulangan Matematikanya di kelas tersebut ialah 80.
+Sebelum remedial, nilai rata-rata murid di kelas tersebut ialah 78, maka nilai rata-rata ulangan siswi ialah....
+a. 22/63
+b. 47/63
+c. 70/117
+d. 88/117</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pembelajaran-online-saat-ini-sangat-memudahkan-bagi-saya-dalam-mencari-semua-jawaban-dari-soal-soal-yang-diberikan-oleh-gurunya-melalui-google-atau-lainnya-namun-ketika-ulangan-harian-berlansung-sa">35.
+                                            Pembelajaran online saat ini, sangat memudahkan bagi saya dalam mencari semua jawaban dari soal-soal yang diberikan oleh gurunya melalui google atau lainnya. Namun ketika Ulangan Harian berlansung, saya tidak pernah mencontek melalui google, saya mengisi jawaban dengan penuh kejujuran. Perilaku yang dicontohkan merupakan bahagian dari... A. Shidq Al-Qolbi B. Shidq Al-Amal C. Shidq Al-Wa'ad. D. Shidq Al-Hadits​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-perhatikan-contoh-contoh-berikut-1-bekerja-sama-membangun-poskamling-2-mengerjakan-soal-ulangan-3-mengikuti-kegiatan-gotong-royong-4-menghadiri-rapat-rt-contoh-manusia-sebagai-makhluk-sosialdit">36.
+                                            3. Perhatikan contoh-contoh berikut.1) Bekerja sama membangun poskamling.2) Mengerjakan soal ulangan.3) Mengikuti kegiatan gotong royong.4) Menghadiri rapat RT.Contoh manusia sebagai makhluk sosialditunjukkan oleh angka ....a. 1), 2), dan 3)b. 1), 2), dan 4)c. 1), 3), dan 4)d. 2), 3), dan 4)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikut-ini-yang-merupakan-contoh-persoalan-yang-dapat-dipecahkan-dengan-keputusan-bersama-adalaha-radiasi-tidak-dapat-mengerjakan-ulangan-karena-tidak-belajarb-selokan-di-gang-kelinci-mampat-kare">37.
+                                            Berikut ini yang merupakan contoh persoalan yang dapat dipecahkan dengan keputusan bersama adalah
+A. Radiasi tidak dapat mengerjakan ulangan karena tidak belajar
+B. Selokan di gang kelinci mampat karena sudah lama tidak dibersihkan
+C. Firman telat masuk sekolah karena bangun kesiangan
+D. Pak RT sakit karena tidak pernah berolahraga</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bantui-kakak-kakak-berikut-ini-yang-bukan-merupakan-contoh-media-untuk-menggambar-adalah-%c2%a05-poina-kertasb-kanvasc-aird-kaindijawab-cepat-soalnya-lagi-ulangan%e2%80%8b">38.
+                                            Bantui kakak - kakak Berikut ini yang bukan merupakan contoh media untuk menggambar adalah .... *5 poina. kertasb. kanvasc. aird. kaindijawab cepat soalnya lagi ulangan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-sikap-bijak-terhadap-makanan-adalah-a-membiarkan-toples-terbuka-setelah-mengambil-makananb-mengambil-makanan-sebanyak-banyaknyac-menyisakan-makanan-saat-makand-mengambil-makanan-secuku">39.
+                                            Contoh sikap bijak terhadap makanan adalah .... a. membiarkan toples terbuka setelah mengambil makananb. mengambil makanan sebanyak-banyaknyac. menyisakan makanan saat makand. mengambil makanan secukupnyajawab y soal nnya mau ulangan ❤️​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#3-perhatikan-contoh-contoh-berikut-1-bekerja-sama-membangun-poskamling-2-mengerjakan-soal-ulangan-3-mengikuti-kegiatan-gotong-royong-4-menghadiri-rapat-rt-contoh-manusia-sebagai-makhluk-sosialdit">40.
+                                            3. Perhatikan contoh-contoh berikut.1) Bekerja sama membangun poskamling.2) Mengerjakan soal ulangan.3) Mengikuti kegiatan gotong royong.4) Menghadiri rapat RT.Contoh manusia sebagai makhluk sosialditunjukkan oleh angka ....a. 1), 2), dan 3b. 1), 2), dan 4c. 1), 3), dan 4)d. 2), 3), dan 4)​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="yang-merupakan-contoh-tugas-kelompok-adalah-a-tugas-diskusi-b-membuat-laporan-kegiatan-c-mengerjakan-soal-ulangan-harian%e2%80%8b">
+                            1. yang merupakan contoh tugas kelompok adalah a. tugas diskusi b. membuat laporan kegiatan c. mengerjakan soal ulangan harian​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. Tugas Diskusi</p><p>_______</p><p></p><p><strong>Jawaban:</strong></p><p>A.Tugas diskusi</p><p><strong>Penjelasan:</strong></p><p>semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="21-berikut-ini-yang-merupakan-contoh-kerja-sama-dalam-keberagaman-di-sekolah-adalah-a-kerja-bakti-membersihkan-halaman-sekolah-c-mengerjakan-soal-ulangan-secara-mandirib-berdiskusi-mengerjakan">
+                            2. 21. Berikut ini yang merupakan contoh kerja sama dalam keberagaman di sekolah adalah ....A kerja bakti membersihkan halaman sekolah C. mengerjakan soal ulangan secara mandiriB. berdiskusi mengerjakan soal ulanganD. mengusulkan kegiatan sekolah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A</p><p><strong>Penjelasan:</strong></p><p>smoga membantu...........</p><p></p><p><strong>Jawaban:</strong></p><p>A.Kerja bakti membersihkan halaman sekolah..</p><p><strong>Penjelasan:</strong></p><p>#maaf kalo salah</p><p>*Semoga Membantu dan Bermanfaat*</p><br />
+                                            <h2 class="ez-toc-section" id="pada-saat-mengerjakan-soal-ulangan-harian-zaki-meminjamkan-lembar-jawaban-kepada-irfan-teman-sebangkunya-irfan-tidak-dapat-mengerjakan-soal-ulangan-karena-tidak-ada-persiapan-sikap-empati-yang-ditu">
+                            3. pada saat mengerjakan soal ulangan harian Zaki meminjamkan lembar jawaban kepada Irfan, teman sebangkunya. Irfan tidak dapat mengerjakan soal ulangan karena tidak ada persiapan. Sikap empati yang ditunjukkan Zaki adalah.......                           A. tepat sekali                                                    B. perlu dicontoh                                               C. tidak benar                                                  D. benar jika didasarkan atas kerelaan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>c. tidak benar</p><p><strong>Penjelasan:</strong></p><p>karena berarti kita membuat irfan tidak mau berusaha dan dapat membuat nya tidak mau berfikir</p><p><strong>Jawaban:</strong></p><p>c. tidak benar</p><p><strong>Penjelasan:</strong></p><p>karena itu adalah ulangan. kita harus mempersiapkannya seminggu atau sehari sebelum ulangan</p><br />
+                                            <h2 class="ez-toc-section" id="dalam-puisi-penggunaan-pengulangan-kata-atau-frase-yang-sama-disebut-a-rimab-simbolismec-aliterasid-repetisicontoh-soal-ujian-akhir-sekolah-pat">
+                            4. Dalam puisi, penggunaan pengulangan kata atau frase yang sama disebut...
+A. rima
+B. simbolisme
+C. aliterasi
+D. repetisi
+Contoh Soal Ujian Akhir Sekolah PAT</h2><br />
+                        <p>Dalam puisi, penggunaan pengulangan kata atau frase yang sama disebut <strong>repetisi (Opsi D)</strong>. Tujuan dari repetisi adalah untuk <strong>memperkuat pesan</strong> <strong>atau efek</strong> yang ingin disampaikan oleh penyair.</p><p></p>Pembahasan<p><strong>Repetisi</strong> adalah teknik sastra yang digunakan dalam puisi untuk mengulang kata, frasa, atau kalimat tertentu secara sengaja. Tujuan pengulangan ini adalah untuk memperkuat pesan atau efek yang ingin disampaikan oleh penyair. Repetisi dapat memberikan tekanan, ritme, dan kekuatan ekspresif pada puisi.</p><p>Kata atau frase dalam repetisi yang diulang dapat muncul pada berbagai posisi dalam puisi, baik pada baris yang sama maupun pada baris yang berbeda. Pengulangan dapat dilakukan dengan tujuan memberikan penekanan pada konsep tertentu, menggambarkan emosi atau suasana hati, atau menciptakan pola bunyi yang indah.</p><p>Pengertian tiap opsi :</p>Rima (<strong>Opsi A</strong>) adalah pengulangan bunyi akhiran kata pada akhir baris yang berdekatan dalam puisi. Simbolisme (<strong>Opsi B</strong>) adalah penggunaan simbol atau lambang untuk mewakili makna yang lebih dalam atau abstrak. Aliterasi (<strong>Opsi C</strong>) adalah pengulangan bunyi konsonan yang sama di awal kata atau dalam satu baris puisi untuk menciptakan efek kesejajaran atau melodi. Repetisi (<strong>Opsi D</strong>) mencakup pengulangan kata atau frase yang sama dalam puisi dengan tujuan seperti penekanan atau efek ekspresif. [tex]            [/tex]<p></p>Pelajari Lebih Lanjut<p>Materi tentang teknik membaca puisi : https://brainly.co.id/tugas/29012134</p><p><strong>#SolusiBrainlyCommunity</strong></p><p><strong>#UjianAkhirSemester #PAT #KisiKisi</strong></p><br />
+                                            <h2 class="ez-toc-section" id="18-kita-diwajibkan-bersatu-dalam-hal-keberagaman-berikut-contoh-sikapbersatu-dalam-keberagaman-kecuali-a-mengerjakan-tugas-kelompokb-mengerjakan-soal-ulangan-bersamac-melakukan-piket-members">
+                            5. 18. Kita diwajibkan bersatu dalam hal keberagaman. Berikut contoh sikapbersatu dalam keberagaman, kecuali ....A. Mengerjakan tugas kelompokB. Mengerjakan soal ulangan bersamaC. Melakukan piket membersihkan kelas Bersama​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>b.mengerjakan soal ulangan bersama</p><p><strong>Penjelasan:</strong></p><p>maa ya kalo salah! ಥ_ಥ</p><p>semoga membantu! ☜(˚▽˚)☞</p><p><strong>Jawaban:</strong></p><p>B . Mengerjkn soal ulangan bersama </p><p><strong>Penjelasan:</strong></p><p>gada penjelasan</p><br />
+                                            <h2 class="ez-toc-section" id="9-berikut-ini-contoh-kerjasama-dalam-belajar-adalah-a-meniru-jawaban-teman-b-membantu-menjelaskan-materi-kepada-teman-yang-belum-paham-c-bekerjasama-mengerjakan-soal-ketika-ulangan-d-menul">
+                            6.  9. Berikut ini contoh kerjasama dalam belajar adalah .... a.meniru jawaban teman b. membantu menjelaskan materi kepada teman yang belum paham . c. bekerjasama mengerjakan soal ketika ulangan d. menuliska pekerjaan rumah temannya agar mendapat hadiah jawab :note : ngasal gpp​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>b. membantu menjelaskan materi kepada teman yang belum paham .</p><p><strong>Penjelasan:</strong></p><p>Semoga membantu</p>B.membantu menjelaskan materi kepada teman yang belum paham<p></p><p><strong>Penjelasan:</strong></p>#I hope this helps<br />
+                                            <h2 class="ez-toc-section" id="contoh-soal-ujian-sekolah-sdnilai-ulangan-matematika-beberapa-siswa86-82-94-92-86-88-96-dan-94-rata-rata-nilai-ulangan-tersebut-adalah-%e2%80%a6-a-8850-c-8950b">
+                            7. Contoh Soal Ujian Sekolah SD
+Nilai ulangan Matematika beberapa siswa:
+86, 82, 94, 92, 86, 88, 96, dan 94.
+Rata-rata nilai ulangan tersebut adalah ….
+A. 88,50                       C. 89,50
+B. 88,75                       D. 89,75</h2><br />
+                        <p>Diketahui nilai ulangan Matematika beberapa siswa: 86, 82, 94, 92, 86, 88, 96, dan 94. Maka rata-rata nilai ulangan tersebut adalah <strong>D</strong><strong>.</strong><strong> </strong><strong>8</strong><strong>9</strong><strong>,</strong><strong>7</strong><strong>5</strong><strong>.</strong></p>Penjelasan dengan langkah-langkah<p><strong>Diketahui</strong><strong>:</strong></p>Nilai ulangan Matematika 86, 82, 94, 92, 86, 88, 96, dan 94.<p><strong>Ditanya</strong><strong>:</strong></p>Rata-rata nilai ulangan. ?? <p><strong>Dijawab</strong><strong>:</strong></p><p>[tex]Mean   =  \frac{Banyak \: data}{Jumlah \: data} [/tex]</p><p>[tex]Mean =  \frac{86 + 82 + 94 + 86 + 88 + 96 + 94}{7} [/tex]</p><p>[tex]Mean =  \frac{718}{8} [/tex]</p><p>[tex]Mean = 89.75[/tex]</p><p>Jadi Mean dari data diatas adalah 89,75.</p>Pelajari Lebih Lanjut Materi tentang Stastitika brainly.co.id/tugas/25748832Materi tentang Stastitika brainly.co.id/tugas/1959221Materi tentang Stastitika https://brainly.co.id/tugas/1959221<p></p><p><strong>#</strong><strong>S</strong><strong>o</strong><strong>l</strong><strong>u</strong><strong>s</strong><strong>i</strong><strong>B</strong><strong>r</strong><strong>a</strong><strong>i</strong><strong>n</strong><strong>l</strong><strong>y</strong><strong>C</strong><strong>o</strong><strong>m</strong><strong>m</strong><strong>u</strong><strong>n</strong><strong>i</strong><strong>t</strong><strong>y</strong></p><p><strong>#</strong><strong>U</strong><strong>j</strong><strong>i</strong><strong>a</strong><strong>n</strong><strong>S</strong><strong>e</strong><strong>k</strong><strong>o</strong><strong>l</strong><strong>a</strong><strong>h</strong></p><p><strong>#</strong><strong>S</strong><strong>D</strong></p><p><strong>#</strong><strong>K</strong><strong>i</strong><strong>s</strong><strong>i</strong><strong>K</strong><strong>i</strong><strong>s</strong><strong>i</strong></p><br />
+                                            <h2 class="ez-toc-section" id="contoh-tindakan-belas-kasih-adalah-a-memarahi-teman-b-bermain-di-rumah-teman-sampai-larut-malam-c-menghibur-teman-yang-sedang-sedih-d-membantu-teman-mengerjakan-soal-saat-ulangan%e2%80%8b">
+                            8. contoh tindakan belas kasih adalah...a memarahi teman b. bermain di rumah teman sampai larut malam c. menghibur teman yang sedang sedih d. membantu teman mengerjakan soal saat ulangan​</h2><br />
+                        <p><strong>Jawaban:</strong></p>c. menghibur teman yang sedang sedih <p></p><p></p><p><strong>se</strong><strong>moga</strong><strong> membantu</strong><strong> </strong><strong>;</strong><strong>)</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="berikut-ini-adalah-contoh-perpindahan-panas-secara-konduksikecuali-a-memegang-sendok-stainles-yang-dicelupkan-di-air-panasb-knalpot-motor-menjadi-panas-saat-mesin-dihidupkan-c-gagang-panci-k">
+                            9. berikut ini adalah contoh perpindahan panas secara konduksi,kecuali...... A. memegang sendok stainles yang dicelupkan di air panasB. knalpot motor menjadi panas saat mesin dihidupkan C. gagang panci ketika sedang menanak nasiD. air mendidih bergerak naik turun ketika dipanaskanjawab ya pliis soalnya ini soal ulangan aku​</h2><br />
+                        <p><strong>Peristiwa</strong> yang bukan contoh <strong>perpindahan panas</strong> secara <strong>konduksi </strong>adalah (D) air mendidih yang bergerak naik turun. <strong>Konduksi</strong> adalah perpindahan panas melalui zat padat yang tidak ikut mengalami perpindahan. Contoh peristiwa pada opsi A, B, dan C adalah contoh <strong>perpindahan panas konduksi.</strong></p><p><strong></strong></p><strong>Pembahasan</strong><p><strong>Perpindahan panas atau kalor </strong>merupakan peristiwa perpindahan panas dari benda bersuhu tinggi ke benda bersuhu rendah. <strong>Perpindahan panas dibedakan menjasi tiga macam</strong>, seperti berikut:</p><p><strong>Konduksi (aliran)</strong></p><p>Perpindahan panas melalui zat padat yang tidak ikut mengalami perpindahan. <strong>Contohnya:</strong></p>Tutup panci yang ikut panas saat digunakan untuk memasak.Ujung logam yang lain akan ikut panas, saat ujung logam satunya dipanaskan di atas api.Knalpot motor yang ikut panas saat mesin kendaraan dihidupkan.<p><strong>Konveksi (hantaran)</strong></p><p>Perpindahan panas yang terjadi melalui aliran yang mana zat perantaranya akan ikut berpindah. <strong>Contohnya:</strong></p>Gerakan naik turun pada air saat dipanaskan.Terjadinya angin darat dan angin laut.Gerakan pada balon udara.Asap pada cerobong pabrik yang membumbung tinggi.<p><strong>Radiasi (pancaran)</strong></p><p>Perpindahan panas tanpa memerlukan zat perantara. <strong>Contohnya:</strong></p>Panas matahari yang menyinari bumi.Tubuh yang terasa hangat saat berada di dekat api unggun.Proses penetasan telur unggas dengan lampu.<p></p><strong>Pelajari lebih lanjut</strong>Materi tentang <strong>pengertian perpindahan panas </strong>https://brainly.co.id/tugas/14039272Materi tentang <strong>macam-macam perpindahan panas dan contohnya </strong>https://brainly.co.id/tugas/3758006Materi tentang <strong>contoh perpindahan panas konveksi </strong>https://brainly.co.id/tugas/42837<p></p><strong>Detail jawaban</strong><p><strong>Kelas: </strong>7</p><p><strong>Mapel: </strong>Fisika</p><p><strong>Bab: </strong>Suhu, Pemuaian, dan Kalor</p><p><strong>Kode:</strong> 7.6.7</p><p></p><p><strong>#TingkatkanPrestasimu</strong></p><br />
+                                            <h2 class="ez-toc-section" id="contoh-perbuatan-meneladani-sikap-pahlawan-pembina-persatuan-dan-kesatuan-di-sekolah-adalaha-mengerjakan-soal-ujian-bersama-sama-b-membantu-teman-mengerjakan-soal-ulangan-harian-c-memb">
+                            10. contoh perbuatan meneladani sikap pahlawan pembina persatuan dan kesatuan di sekolah adalahA. Mengerjakan soal ujian        bersama sama.B. membantu teman    mengerjakan soal ulangan   harian.C.  Membersihkan lingkungan sekolah bersama-sama.D. bersama-sama memperbaiki jembatan.​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>C. Membersihkan lingkungan sekolah bersama-sama</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-bentuk-keterbukaan-yang-dapat-kamu-tunjukkan-di-sekolah-adalah-a-memberikan-memberitahu-jawaban-kepada-teman-saat-ulanganb-berdiskusi-dengan-teman-saat-ulanganc-bertanya-tentang-jawaban-so">
+                            11. contoh bentuk keterbukaan yang dapat kamu tunjukkan di sekolah adalah....a memberikan memberitahu jawaban kepada teman saat ulanganB. berdiskusi dengan teman saat ulanganC. bertanya tentang jawaban soal ulangan kepada teman d. bertanya kepada guru tentang pelajaran yang belum jelas e. tidak memaksakan keputusan hasil musyawarah karena tidak sesuai dengan pendapat pribadi</h2><br />
+                        Jawabannya adalah D.Bertanya Kepada Guru tentang Jawaban yg kurang Jelas.<br />#Alasannya karena Dengan Bertanya kepada Guru Maka Proses Belajar Menjadi Lebih Baik dan menunjukkan keterbukaan.<br /><br />*semoga membantu*<br />
+                                            <h2 class="ez-toc-section" id="quiz-1560materi-statistikahasil-ulangan-matematika-sekelompok-siswa-sebagai-berikut-banyaknya-siswa-yang-nilainya-lebih-dari-rata-rata-adalah-a-8-orangb-14-orangc-16-orangd-21-orangcontoh-s">
+                            12. QUIZ (1560)Materi: StatistikaHasil ulangan matematika sekelompok siswa sebagai berikut.Banyaknya siswa yang nilainya lebih dari rata-rata adalah ...A. 8 orangB. 14 orangC. 16 orangD. 21 orang(Contoh Soal Ujian SMP)​​​​​​​​​​​​​</h2><br />
+                        <p><strong><strong>Jawaban:</strong></strong></p><p>B. 14 orang </p><p><strong><strong>Penjelasan dengan langkah-langkah:</strong></strong></p>Rumus mencari nilai rata-rata untuk soal diatas:<p>[tex]\rm \bar{x} =  \frac{jumlah \: nilai  \: \times \: frekuensi}{jumlah \: frekuensi}   \\\rm=  \frac{ \sum (nilai  \: \times \: frekuensi)}{ \sum \: frekuensi}  \:  \:  \: [/tex]</p>Cara menghitung banyak siswa yang nilainya lebih dari rata-rata:<p>Banyaknya siswa yang nilainya lebih dari rata-rata dapat dihitung dengan menjumlahkan frekuensi dAri nilai yang lebih besar dari rata-ratanya. </p><p></p>Penyelesaian soal:<p>Penyelesaian soal terlampir </p><p>.</p><p><strong>#</strong><strong>L</strong><strong>e</strong><strong>a</strong><strong>r</strong><strong>n</strong><strong>W</strong><strong>i</strong><strong>t</strong><strong>h</strong><strong>P</strong><strong>a</strong><strong>n</strong><strong>d</strong><strong>a</strong></p><br />
+                                            <h2 class="ez-toc-section" id="di-bawah-ini-merupakan-contoh-sikap-yang-menunjukkan-sila-kedua-pancasila-dalam-kehidupan-sehari-hari-adalah-pilihan-tunggal-8-poin-a-saling-membantub-bermusyawarahc-melaksanakan-ibadahd-s">
+                            13. Di bawah ini merupakan contoh sikap yang menunjukkan sila kedua Pancasila dalam kehidupan sehari-hari adalah..... Pilihan tunggal.( 8 poin )A. Saling membantuB. BermusyawarahC. Melaksanakan ibadahD. Saling menghargai• yang jawab soal-ku, aku follow• jangan asal–asalan soalnya buat ulangan      harian​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>D. saling menghargai</p><p><strong>Penjelasan:</strong></p><p>maaf klo salah</p><p><strong>Jawaban:</strong></p><p>D.Saling menghormati</p><br />
+                                            <h2 class="ez-toc-section" id="salah-satu-contoh-perwujudan-rasa-persatuan-dan-kesatuan-di-sekolah-adalah-dengana-tidak-pernah-datang-terlambat-b-mengerjakan-tugas-piket-bersama-sama-c-bekerja-sama-saat-menyelesaikan-soal-ulanga">
+                            14. salah satu contoh perwujudan rasa persatuan dan kesatuan di sekolah adalah denganA. tidak pernah datang terlambat B. mengerjakan tugas piket bersama-sama C. bekerja sama saat menyelesaikan soal ulangan D. menggunakan surat izin saat berhalangan masuk sekolah​</h2><br />
+                        <p>contoh perwujudan rasa persatuan dan kesatuan disekolah adalah dengan .....(B)mengerjakan tugas piket bersama sama</p><p>maaf kalo salah y</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-pengamalan-sila-ketiga-pancasila-adalaha-siswa-piket-kelas-bersamab-diskusi-menentukan-ketua-kelasc-siswa-mengerjakan-soal-ulangan-d-menyiram-tumbuhan-yang-ada-di-depan-kelas%e2%80%8b">
+                            15. contoh pengamalan sila ketiga Pancasila adalahA. siswa piket kelas bersamaB. diskusi menentukan ketua kelasC. siswa mengerjakan soal ulangan D. menyiram tumbuhan yang ada di depan kelas​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>C. </p><p><strong>Penjelasan:</strong></p><p>makasihhh maap kalo salah </p><br />
+                                            <h2 class="ez-toc-section" id="contoh-pelaksanaan-hak-di-sekolah-yaitu-a-mendengar-pendapat-teman-saat-diskusib-memberikan-contekan-kepada-temanc-mengerjakan-tugas-individu-bersama-samad-membantu-teman-mengerjakan-soal-ulan">
+                            16. Contoh pelaksanaan hak di sekolah yaitu ....A. mendengar pendapat teman saat diskusiB. memberikan contekan kepada temanC. mengerjakan tugas individu bersama-samaD. membantu teman mengerjakan soal ulangan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>a</p><p><strong>Penjelasan:</strong></p><p>mendengarkan pendapat teman saat diskusi di dalam kls</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-tumbuhan-yg-bisa-di-olah-sebagai-bahan-serat-adalah-a-serat-b-batang-c-kapas-d-buah-mohon-di-jawab-soalnya-butuh-sekarang-untuk-ulangan-hehehe">
+                            17. Contoh Tumbuhan Yg Bisa Di Olah Sebagai Bahan Serat Adalah... A. Serat. B. Batang. C. Kapas. D. Buah. Mohon Di Jawab Soalnya Butuh Sekarang Untuk Ulangan Hehehe:').</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>B. Batang</p><p></p><p></p><p>Semoga membantu:)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="berikut-contoh-sikap-bersatu-dalam-mengisi-kemerdekaan-kecuali-a-melaksanakan-piket-b-mengerjakan-soal-saat-ulangan-c-menjeguk-teman-sakit-d-memecahkan-masala-dengan-musyawarah-dan-mufakan">
+                            18. berikut contoh sikap bersatu dalam mengisi kemerdekaan, kecuali A. melaksanakan piket B. mengerjakan soal saat ulangan C. menjeguk teman sakit D. memecahkan masala dengan musyawarah dan mufakan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>B</p><p><strong>Penjelasan:</strong></p><p>Masa B harus bersatu?</p><p>.</p><p>sekian mohon jadikan jawaban tercerdas</p><p>b mengerjakan soal ulangan</p><p></p><p>sorry bgt klo salah</p><p>klo bener kasih jawaban terbaik dong</p><br />
+                                            <h2 class="ez-toc-section" id="husnul-setiap-mengerjakan-soal-ulangan-bersungguh-sungguh-dan-memiliki-sportifitas-ilustrasi-tersebut-merupakan-contoh-perilaku-%e2%80%a6-a-qona%e2%80%99ahb-muru%e2%80%99ahc-syaja%e2%80%99ahd-ana">
+                            19. Husnul setiap mengerjakan soal ulangan bersungguh-sungguh dan memiliki sportifitas. Ilustrasi tersebut merupakan contoh perilaku ….A. qona’ahB. muru’ahC. syaja’ahD. ananiyahE. qauniyah​</h2><br />
+                        <p><strong>jawab</strong><strong>:</strong></p><p>C. syaja'ah</p><p></p><p><strong>Penjelasan:</strong></p><p>Syaja’ah artinya (شَجَاعَة) keberanian, keteguhan, ketegasan, kegagahan, dan kegagahberanian. Syaja’ah didasari dengan pikiran yang matang.</p><p></p><p>-maaf jika salah-</p><p>    _semoga bermanfaat_</p><br />
+                                            <h2 class="ez-toc-section" id="2-berikut-yang-bukan-merupakan-contoh-penggunaan-komputer-dalam-bidang-pendidikan-adalah-ips-kd-3-2a-adanya-perpustakaan-onlineb-membantu-penyelesaian-soal-ketika-ulanganc-materi-pelajara">
+                            20. 2. Berikut yang bukan merupakan contoh penggunaan komputer dalam bidang pendidikan adalah .... (IPS - KD 3.2)a. adanya perpustakaan onlineb. membantu penyelesaian soal ketika ulanganc. materi pelajaran lebih menarikd. memudahkan berbagi materi dan soal​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>b. membantu penyelesaian soal ketika ulangan</p><p></p><p><strong>Jawaban:</strong></p><p>b.membantu penyelesaian soal ketika ulangan</p><p><strong>Penjelasan:</strong></p><p>karena kalau ulangan nanti bisa mencontek ,maaf kalau salah </p><br />
+                                            <h2 class="ez-toc-section" id="aisyah-adalah-murid-yang-teliti-dan-cermat-dalam-kegiatan-sehari-hari-dia-selalu-teliti-dan-cermat-dalam-mengerjakan-soal-soal-ulangan-dan-tidak-menjawab-soal-soal-ulangan-dengan-tergesa-gesa-sikap">
+                            21. Aisyah adalah murid yang teliti dan cermat dalam kegiatan sehari-hari. Dia selalu teliti dan cermat dalam mengerjakan soal-soal ulangan dan tidak menjawab soal-soal ulangan dengan tergesa-gesa. Sikap Aisyah merupakan contoh dari salah satu Asmaul Husna, yaitu
+A. Al 'Alim
+B. Al Khobir
+C. As-Sami'
+D. Al Bashir
+Tolong dijawab dengan benar ya</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>a.al khobir</p><p><strong>Penjelasan:</strong></p><p>kalok gk salah itu</p><p></p><p>Jawaban:Al-Khobir</p><p></p><p>Penjelasan:Al-Khobir artinya yang maha waspada</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="contoh-soal-utbk-snpmbsebelum-melaksanakan-remedial-rata-rata-nilai-ulangan-siswa-laki-laki-di-kelas-12-ialah-78-sedangkan-rata-rata-nilai-ulangan-siswa-perempuan-ialah-%e2%80%a6a-805b-81c-8">
+                            22. Contoh Soal UTBK SNPMB
+Sebelum melaksanakan remedial, rata-rata nilai ulangan siswa laki-laki di kelas 12 ialah 78, sedangkan rata-rata nilai ulangan siswa perempuan ialah …
+a. 80,5
+b. 81
+c. 81,5
+d. 82</h2><br />
+                        <p>Nilai rata-rata ulangan dari siswa perempuan adalah <strong>81,5 (C).</strong> Nilai ini adalah nilai rata-rata "sebelum remedial" sebagaimana tercantum pada awal kalimatnya.</p><p></p><p><strong>Soal Lengkap</strong>:<br />Di kelas 12 ada 12 siswa laki-laki dan 16 siswa perempuan. Rata-rata nilai ulangan di kelas 12 tersebut adalah 80. Setelah melihat hasil tersebut, guru memberikan kesempatan kepada 4 siswa, dengan nilai masing-masing 52, 56, 62, dan 66, untuk melakukan remedial. Diketahui bahwa nilai rata-rata peserta remedial naik 7 poin. Sebelum melaksanakan remedial, rata-rata nilai ulangan siswa laki-laki di kelas 12 ialah 78, sedangkan rata-rata nilai ulangan siswa perempuan ialah ....</p><p>a. 80,5<br />b. 81<br />c. 81,5<br />d. 82</p><p></p><strong>Penjelasan dengan langkah-langkah</strong><p><strong>Diketahui:</strong></p>Jumlah siswa laki-laki = L.Jumlah siswa perempuan = P.L = 12<br />P = 16Total siswa:<br />L + P = 12 + 16 = 28.Rata-rata ulangan sebelum remedial:<br />Dari seluruh siswa = RA = 80.<br />Dari siswa laki-laki saja = RL = 78.<p><strong>Ditanyakan:</strong></p><p>Bilangan yang dimaksud =?</p><p><strong>Penyelesaian:</strong></p><p><strong>Langkah 1</strong><br />Perhitungan total nilai seluruh siswa (A).</p>A = Rata-rata seluruh siswa x Total siswa<br />A = RA x (L + P)<br />A = 80 x (28)<br />A = 2240.<p><strong>Langkah 2</strong><br />Perhitungan total nilai dari siswa laki-laki (B).</p>B = Rata-rata siswa laki-laki x Jumlah siswa laki-laki<br />B = RL x L<br />B = 78 x 12<br />B = 936.<p><strong>Langkah 3</strong><br />Perhitungan total nilai dari siswa perempuan (C).</p>C = Total nilai seluruh siswa - Total nilai siswa laki-laki<br />C = A - B<br />C = 2240 - 936<br />C = 1304.<p><strong>Langkah 4</strong><br />Perhitungan rata-rata nilai ulangan siswa perempuan (D).</p>D = Total nilai siswa perempuan : Jumlah siswa perempuan<br />D = C : P<br />D = 1304 : 16<br /><strong>D = 81,5</strong><p></p><p>Catatan:<br />Terkadang dalam SNPMB tidak semua data perlu dipakai, kemungkinan adalah jebakan untuk menguji pemahaman soal.</p><p></p><strong>Pelajari lebih lanjut</strong><p>Pelajari lebih lanjut materi tentang perhitungan rata-rata nilai lainnya pada https://brainly.co.id/tugas/23142142</p><p></p><p><strong>#UTBK #SNPMB #KisiKisi </strong><strong><br /></strong><strong>#SolusiBrainlyCommunity</strong></p><br />
+                                            <h2 class="ez-toc-section" id="contoh-hasil-keputusan-bersama-dalam-musyawarah-adalah-hots-a-bekerja-sama-mengerjakan-soal-ulangan-b-mengatur-jadwal-belajar-c-membeli-makanan-di-kantin-d-melaksanakan-kegiatan-perkemahan-bers">
+                            23. Contoh hasil keputusan bersama dalam musyawarah adalah.... HOTS a. bekerja sama mengerjakan soal ulangan b.mengatur jadwal belajar c. membeli makanan di kantin d. melaksanakan kegiatan perkemahan bersama​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>d </p><p><strong>Penjelasan:</strong></p><p> kalo b jadwal apa dulu? kalo belajar dirumah ya ngapain musyawarah kan kamu yang atur waktu sendiri</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="soal-ulangan-umum-geografi-sma-contoh-objek-geografi-yang-berhubungan-dengan-litosfer-adalah-a-gelombang-dan-arus-laut-b-curah-hujan-c-tanah-longsor-d-cuaca-e-pasang-surut">
+                            24. Soal ulangan umum Geografi SMA: Contoh objek geografi yang berhubungan dengan litosfer adalah...
+ a. Gelombang dan arus laut
+ b. Curah hujan
+ c. Tanah longsor
+ d. Cuaca
+ e. Pasang surut</h2><br />
+                        Objek geografi yg berhubungan dengan litosfer adalah c. tanah longsor.<br />
+                                            <h2 class="ez-toc-section" id="di-bawah-ini-yang-merupaka-contoh-kalimat-pasif-adalah-a-dalam-kegiatan-tersebut-rizal-ditunjuk-sebagai-ketua-pelaksana-b-bu-lana-mengajarkan-mata-pelajaran-bahasa-indonesia-di-sd-tunas-glob">
+                            25. Di bawah ini yang merupaka contoh kalimat pasif adalah.... *
+A. Dalam kegiatan tersebut, Rizal ditunjuk sebagai ketua pelaksana.
+B. Bu Lana mengajarkan mata pelajaran Bahasa Indonesia di SD Tunas Global.
+C. Sebelum mengerjakan ulangan Bahasa Indonesia terlebih dahulu harus baca 
+soalnya berulang-ulang.
+D. Untuk menghindari covid-19 kita harus mematuhi protokol kesehatan.</h2><br />
+                        <p><strong>Kalimat</strong><strong> </strong><strong>pasif</strong><strong> </strong><strong>mempu</strong><strong>nyai</strong><strong> </strong><strong>ciri</strong><strong> </strong><strong>utama</strong><strong> </strong><strong>yaitu</strong><strong> </strong><strong>predikatnya</strong><strong> </strong><strong>berimbuhan</strong><strong> </strong><strong>di</strong><strong>,</strong><strong> </strong><strong>ter</strong><strong> </strong><strong>dan</strong><strong> </strong><strong>ter-kan</strong><strong>.</strong><strong> </strong><strong>Dari</strong><strong> </strong><strong>pernyataan</strong><strong> </strong><strong>diatas</strong><strong> </strong><strong>yang</strong><strong> </strong><strong>termasuk</strong><strong> </strong><strong>kalima</strong><strong>t</strong><strong> </strong><strong>pasi</strong><strong>f</strong><strong> </strong><strong>adalah</strong><strong> </strong><strong>dalam</strong><strong> </strong><strong>kegiat</strong><strong>an</strong><strong> </strong><strong>ter</strong><strong>sebut</strong><strong>,</strong><strong> </strong><strong>Rizal</strong><strong> </strong><strong>ditunjuk</strong><strong> </strong><strong>sebagai</strong><strong> </strong><strong>ketua</strong><strong> </strong><strong>pelak</strong><strong>sana</strong><strong>.</strong><strong> </strong><strong>Yang</strong><strong> </strong><strong>menyebabkan</strong><strong> </strong><strong>itu</strong><strong> </strong><strong>kalima</strong><strong>t</strong><strong> </strong><strong>pasi</strong><strong>f</strong><strong> </strong><strong>adalah</strong><strong> </strong><strong>kata</strong><strong> </strong><strong>"</strong><strong>ditunjuk</strong><strong>"</strong><strong> </strong><strong>karena </strong><strong>predika</strong><strong>tnya</strong><strong> </strong><strong>berimbuhan</strong><strong> </strong><strong>di</strong></p><p></p><p><strong>Opsi</strong><strong> </strong><strong>-</strong><strong>-</strong><strong>&gt;</strong><strong> </strong><strong>A</strong></p><p></p><p><strong>S</strong><strong>emoga</strong><strong> Membantu</strong><strong> </strong><strong>:</strong><strong>)</strong></p><br />
+                                            <h2 class="ez-toc-section" id="dibawah-ini-contoh-persoalan-yang-dapat-diselesaikan-dengan-musyawarah-adalah-a-kesulitan-mengerjakan-ulangan-karena-lebih-suka-bermain-daripada-belajar-b-prabowo-sering-terlambat-ke-sekolah-karena">
+                            26. dibawah ini contoh persoalan yang dapat diselesaikan dengan musyawarah adalah A. kesulitan mengerjakan ulangan karena lebih suka bermain daripada belajar B. Prabowo sering terlambat ke sekolah karena kesulitan bangun pagi C. Nayla kesulitan mengerjakan PR karena kurang belajar D. mementingkan kebutuhan pribadi ​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>a.mungkin jawabannya A</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="4-salah-satu-contoh-yang-menunjukkan-sikap-hidup-yang-berubah-menjadi-baruadalah-a-saya-menyesal-memukul-teman-di-saat-bermainb-saya-menyesal-mencuri-lalu-di-pukul-ayahc-saya-menyesal-dan-berjan">
+                            27. 4. Salah satu contoh yang menunjukkan sikap hidup yang berubah menjadi baruadalah...a. Saya menyesal memukul teman di saat bermainb. Saya menyesal mencuri lalu di pukul ayahC. Saya menyesal dan berjanji tidak melakukan lagid. Saya menyesal menyontek pada saat sulit  tolong kak di jawab ini soal ulangan soalnya ​</h2><br />
+                        <p>jawaban nya C</p><p><strong>Penjelasan:</strong></p><p></p><p></p><p>SEMANGAT YA</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="10-salah-satu-contoh-perwujudanrasa-persatuan-dan-kesatuan-disekolah-adalah-dengan-a-menggunakan-surat-izin-saatberhalangan-masuk-sekolahb-bekerja-sama-saatmenyelesaikan-soal-ulanganc-mengerja">
+                            28. 10. Salah satu contoh perwujudanrasa persatuan dan kesatuan disekolah adalah dengan ....A. Menggunakan surat izin saatberhalangan masuk sekolahB. Bekerja sama saatmenyelesaikan soal ulanganC. Mengerjakan tugas piketbersama-samaD. Tidak pernah datang terlambat​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>C. Mengerjakan tugas piket bersama-sama</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="contoh-perilaku-yang-menunjukkan-keyakinan-terhadap-asmaul-husna-al-baqi-adalah-%e2%80%a6-a-berdoa-dan-bergantung-hanya-kepada-allah-swtb-membantu-teman-mengerjakan-soal-ulanganc-berhati-hati-d">
+                            29. Contoh perilaku yang menunjukkan keyakinan terhadap Asmaul Husna Al-Baqi adalah …. 
+A. berdoa dan bergantung hanya kepada Allah SWT
+B. membantu teman mengerjakan soal ulangan
+C. Berhati-hati dalam melakukan sesuatu
+D. Disiplin dalam memanfaatkan waktu</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A.BERDOA DAN BERGANTUNG HANYA KEPADA ALLAH SWT..</p><p><strong>Penjelasan:</strong></p><p>Al-Baqi adalah Yang Mahakekal.</p><p></p><p>MAAF KALO SALAH</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-kalimat-yang-menggunakan-majas-hiperbola-adalah-a-hayama-nomor-1-dunia-b-lokami-seleraku-c-dengan-kekuatan-10-tangan-nyuci-jadi-enteng-d-ada-aqua-tolong-di-jawab-cepat-soalnya">
+                            30. Contoh kalimat yang menggunakan majas hiperbola adalah ...A . Hayama , nomor 1 dunia B . Lokami , seleraku C . Dengan kekuatan 10 tangan , nyuci jadi enteng D . Ada Aqua Tolong di Jawab Cepat Soalnya Ulangan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>c.dengan kekuatan 10 tangan , nyuci jadi enteng.</p><p><strong>Penjelasan:</strong></p><p>majas hiperbola kan kaya melebih lebihkan gaya bahasany itu ya,10 tangan juga ya seperti itu kan?</p><p>oke sekian</p><p><strong>Jawaban:</strong></p><p>C.kekuatan 10 tangan,nyuci jadi enteng</p><p><strong>Penjelasan:</strong></p><p>hiperbola adalah kata yang di lebih-lebihkan</p><p></p><p>maaf kalau salah:)</p><br />
+                                            <h2 class="ez-toc-section" id="9-contoh-pengamalan-sila-ketigapancasila-adalaha-membersihkan-halaman-sekolahbersamab-bermusyawarahc-membantu-teman-mengerjakan-soalulangan-hariand-rajin-beribadah%e2%80%8b">
+                            31. 9. Contoh pengamalan sila ketigapancasila adalaha. Membersihkan halaman sekolahbersamab. Bermusyawarahc. Membantu teman mengerjakan soalulangan hariand. Rajin beribadah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>a. Membersihkan halaman sekolah bersama</p><p><strong>Penjelasan:</strong></p><p>Semoga membantu Kak</p><p><strong>Jawaban:</strong></p><p>A.membersihkan halaman sekolah bersama</p><p><strong>Penjelasan:</strong></p><p>karena kita bersama sama membersihkan sekolah sehingga terciptalah persatuan di sekolah</p><p>semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="berikut-contoh-kerjasama-yang-dilakukan-di-lingkungan-sekolah-a-ikuti-posyandu-b-kerja-bakti-membersihkan-kelas-c-mengerjakan-soal-ulangan-bersama-sama-d-mengikuti-siskamling%e2%80%8b">
+                            32. berikut contoh kerjasama yang dilakukan di lingkungan sekolah A ikuti Posyandu B kerja bakti membersihkan kelas C mengerjakan soal ulangan bersama-sama D mengikuti siskamling​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>B. Kerja bakti membersihkan kelas</p><p></p><p><strong>Semoga</strong><strong> </strong><strong>me</strong><strong>mbantu</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="4-contoh-pengamalan-sila-ketiga-pancasila-adalah-a-siswa-piket-kelas-bersamab-diskusi-menentukan-ketua-kelasc-siswa-mengerjakan-soal-ulangand-myiram-tumbuhan-yang-ada-di-depan-kelas">
+                            33. 4. Contoh pengamalan sila ketiga Pancasila adalah ....  a. siswa piket kelas bersamab. diskusi menentukan ketua kelasc. siswa mengerjakan soal ulangand. myiram tumbuhan yang ada di depan kelas​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. siswa piket kelas bersama</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-soal-utbk-snpmbsebuah-kelas-ada-12-murid-laki-laki-dan-16-murid-perempuan-rata-rata-nilai-ulangan-matematikanya-di-kelas-tersebut-ialah-80-sebelum-remedial-nilai-rata-rata-murid-di-kelas-t">
+                            34. Contoh Soal UTBK SNPMB
+Sebuah kelas, ada 12 murid laki-laki dan 16 murid perempuan. Rata-rata nilai ulangan Matematikanya di kelas tersebut ialah 80.
+Sebelum remedial, nilai rata-rata murid di kelas tersebut ialah 78, maka nilai rata-rata ulangan siswi ialah....
+a. 22/63
+b. 47/63
+c. 70/117
+d. 88/117</h2><br />
+                        <p>Nilai <strong>rata-rata</strong> ulangan murid perempuan ialah <strong>81,5.</strong></p><p>Rata rata atau mean dari suatu data dapat dicari dengan menggunakan <strong>rumus :</strong></p><p>[tex]^-x = \frac{{\Sigma}x_i}{n}[/tex]</p><p></p><p>Keterangan:</p><p>[tex]^-x[/tex] = rata-rata</p><p>[tex]{\Sigma}x_i}[/tex] = jumlah data</p><p>n = banyaknya data</p><p><strong></strong></p><p><strong>Penjelasan dengan langkah-langkah:</strong></p><p><strong>Diketahui:</strong></p><p>Murid laki-laki = 12 </p><p>Murid perempuan = 16 </p><p>Rata-rata nilai ulangan Matematikanya di kelas tersebut ialah 80.</p><p></p><p><strong>Ditanya:</strong></p><p>Sebelum remedial, nilai rata-rata murid laki-laki di kelas tersebut ialah 78, maka nilai rata-rata ulangan murid perempuan ialah....</p><p></p><p><strong>Jawab:</strong></p><p>Misalkan:</p><p>Nilai murid laki-laki = a</p><p>Nilai murid perempuan = b</p><p></p><p>Rata-rata nilai ulangan Matematikanya di kelas tersebut ialah 80.</p><p>[tex]\frac{12 \times a + 16 \times b}{12+16} =80[/tex]</p><p>12 x 78 + 16 x b = 80 x (12 + 16)</p><p>936 + 16b = 2.240</p><p>16 b = 2240 - 936</p><p>16b = 1304</p><p>b = 326/4</p><p>b = 81,5</p><p></p><p>Jadi, nilai rata-rata ulangan murid perempuan ialah 81,5.</p><p></p><p><strong>Pelajari lebih lanjut:</strong></p>Materi tentang rata-rata dapat disimak juga di https://brainly.co.id/tugas/37535518<p><strong></strong></p><p><strong>#SPJ4</strong></p><p><strong>#UTBK #SNPMB #KisiKisi</strong></p><br />
+                                            <h2 class="ez-toc-section" id="pembelajaran-online-saat-ini-sangat-memudahkan-bagi-saya-dalam-mencari-semua-jawaban-dari-soal-soal-yang-diberikan-oleh-gurunya-melalui-google-atau-lainnya-namun-ketika-ulangan-harian-berlansung-sa">
+                            35. Pembelajaran online saat ini, sangat memudahkan bagi saya dalam mencari semua jawaban dari soal-soal yang diberikan oleh gurunya melalui google atau lainnya. Namun ketika Ulangan Harian berlansung, saya tidak pernah mencontek melalui google, saya mengisi jawaban dengan penuh kejujuran. Perilaku yang dicontohkan merupakan bahagian dari... A. Shidq Al-Qolbi B. Shidq Al-Amal C. Shidq Al-Wa'ad. D. Shidq Al-Hadits​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>B.shidiq Al-Amal</p><p>Nama lain JUJUR DALAM PERBUATAN adalah AS-SHIDQU FIL AMAL atau Shidq Al–Amal. Jujur dalam perbuatan adalah salah satu jenis kejujuran yang artinya adalah perbuatannya mengandung kebenaran, sesuai dengan apa yang Allah ridhahi atau selaras dengan niat dan ucapannya.</p><br />
+                                            <h2 class="ez-toc-section" id="3-perhatikan-contoh-contoh-berikut-1-bekerja-sama-membangun-poskamling-2-mengerjakan-soal-ulangan-3-mengikuti-kegiatan-gotong-royong-4-menghadiri-rapat-rt-contoh-manusia-sebagai-makhluk-sosialdit">
+                            36. 3. Perhatikan contoh-contoh berikut.1) Bekerja sama membangun poskamling.2) Mengerjakan soal ulangan.3) Mengikuti kegiatan gotong royong.4) Menghadiri rapat RT.Contoh manusia sebagai makhluk sosialditunjukkan oleh angka ....a. 1), 2), dan 3)b. 1), 2), dan 4)c. 1), 3), dan 4)d. 2), 3), dan 4)​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>C.1),3)dan 4)</p><p></p>Semoga membantu^^<p><strong>Jawaban:</strong></p><p>c. 1), 3), dan 4)</p><p><strong>Penjelasan:</strong></p><p>Maaf ya kalau salah =D</p><br />
+                                            <h2 class="ez-toc-section" id="berikut-ini-yang-merupakan-contoh-persoalan-yang-dapat-dipecahkan-dengan-keputusan-bersama-adalaha-radiasi-tidak-dapat-mengerjakan-ulangan-karena-tidak-belajarb-selokan-di-gang-kelinci-mampat-kare">
+                            37. Berikut ini yang merupakan contoh persoalan yang dapat dipecahkan dengan keputusan bersama adalah
+A. Radiasi tidak dapat mengerjakan ulangan karena tidak belajar
+B. Selokan di gang kelinci mampat karena sudah lama tidak dibersihkan
+C. Firman telat masuk sekolah karena bangun kesiangan
+D. Pak RT sakit karena tidak pernah berolahraga</h2><br />
+                        B.selokan di gang kelinci mampet karena sudah lama tidak dibersihkan<br /><br />semoga membantub.selokan di gang kelinci mampet karena sudah lama tidak dibersihkan<br />
+                                            <h2 class="ez-toc-section" id="bantui-kakak-kakak-berikut-ini-yang-bukan-merupakan-contoh-media-untuk-menggambar-adalah-%c2%a05-poina-kertasb-kanvasc-aird-kaindijawab-cepat-soalnya-lagi-ulangan%e2%80%8b">
+                            38. Bantui kakak - kakak Berikut ini yang bukan merupakan contoh media untuk menggambar adalah .... *5 poina. kertasb. kanvasc. aird. kaindijawab cepat soalnya lagi ulangan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>c. Air</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah</p><p></p><p>semoga membantu</p><p>Jawabannya nya</p><p><strong>C</strong>. air (karena tidak bisa)</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-sikap-bijak-terhadap-makanan-adalah-a-membiarkan-toples-terbuka-setelah-mengambil-makananb-mengambil-makanan-sebanyak-banyaknyac-menyisakan-makanan-saat-makand-mengambil-makanan-secuku">
+                            39. Contoh sikap bijak terhadap makanan adalah .... a. membiarkan toples terbuka setelah mengambil makananb. mengambil makanan sebanyak-banyaknyac. menyisakan makanan saat makand. mengambil makanan secukupnyajawab y soal nnya mau ulangan ❤️​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>D. Mengambil makanan secukupnya</p><p><strong>Penjelasan:</strong></p><p>Maaf kalau salah semoga bermanfaat dan jika jawabannya benar jangan dihapus ya. </p><p><strong>Jawaban:</strong></p><p>D</p><p><strong>Penjelasan:</strong></p><p>jawabannya yang d yaitu mengambil makanan secukupnya </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="3-perhatikan-contoh-contoh-berikut-1-bekerja-sama-membangun-poskamling-2-mengerjakan-soal-ulangan-3-mengikuti-kegiatan-gotong-royong-4-menghadiri-rapat-rt-contoh-manusia-sebagai-makhluk-sosialdit">
+                            40. 3. Perhatikan contoh-contoh berikut.1) Bekerja sama membangun poskamling.2) Mengerjakan soal ulangan.3) Mengikuti kegiatan gotong royong.4) Menghadiri rapat RT.Contoh manusia sebagai makhluk sosialditunjukkan oleh angka ....a. 1), 2), dan 3b. 1), 2), dan 4c. 1), 3), dan 4)d. 2), 3), dan 4)​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>jawabanya C,</p><p><strong>Penjelasan:</strong></p><p>semoga mwmbantu</p><p><strong>Jawaban:</strong></p><p>c)  1,3,dan 4</p><p>kayaknya sih itu</p><p></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/ZeqJewFm7zc?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>b_indonesia</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/but-if-we-re-strong-enough-to-let-it-in.html">But If We Re Strong Enough To Let It In</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-dan-jawaban-persamaan-akuntansi-dan-laporan-keuangan.html">Contoh Soal Dan Jawaban Persamaan Akuntansi Dan Laporan Keuangan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/liam-vs-noel.html">Liam Vs Noel</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/kim-woo-bin-model.html">Kim Woo Bin Model</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/segway-motor.html">Segway Motor</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-konsinyasi-metode-terpisah.html">Contoh Soal Konsinyasi Metode Terpisah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/cara-transfer-uang-dari-amerika-ke-indonesia.html">Cara Transfer Uang Dari Amerika Ke Indonesia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/remix-to-ignition-hot-and-fresh-out-the-kitchen.html">Remix To Ignition Hot And Fresh Out The Kitchen</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/127-18.html">127 18</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-antonim-dan-sinonim.html">Contoh Soal Antonim Dan Sinonim</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-bahasa-inggris-unbk.html">Contoh Soal Bahasa Inggris Unbk</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/ejen-iman.html">Ejen Iman</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-akuntansi-jurnal-umum-perusahaan-jasa.html">Contoh Soal Akuntansi Jurnal Umum Perusahaan Jasa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-ekonomi-kelas-12-semester-2-beserta-jawabannya.html">Contoh Soal Ekonomi Kelas 12 Semester 2 Beserta Jawabannya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-deskriptif-teks.html">Contoh Soal Deskriptif Teks</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/meghan-markle-trooping-of-the-colour-2022.html">Meghan Markle Trooping Of The Colour 2022</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/i-don-t-really-wanna-go-can-we-get-it-together.html">I Don t Really Wanna Go Can We Get It Together</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/wahyu-budiarto-chevron.html">Wahyu Budiarto Chevron</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/contoh-soal-tes-stis.html">Contoh Soal Tes Stis</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://materikita.github.io/atom-menurut-thomson.html">Atom Menurut Thomson</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://materikita.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://materikita.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://materikita.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://materikita.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://materikita.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/1d/a7/d8/1da7d80839196eccc4a624ab91e5ccbf.js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
